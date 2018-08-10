@@ -45,10 +45,10 @@ set(ENABLE_TESTS FALSE CACHE PATH "Enable unit testing (GTest required).")
 if (ENABLE_TESTS OR CMAKE_BUILD_TYPE STREQUAL "Debug")
   add_subdirectory(tests)
 endif()
-add_subdirectory(examples)
+#add_subdirectory(examples)
 
 add_library(bobject SHARED ${SOURCE_FILES})
-target_compile_definitions(bobject PRIVATE -DBO_EXPORTS)
+target_compile_definitions(bobject PRIVATE -DBO_COMPILING_DLL)
 
 # Define headers for this library. PUBLIC headers are used for
 # compiling the library, and will be added to consumers' build

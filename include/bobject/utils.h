@@ -30,7 +30,7 @@
 #define UTILS_H_EYRLMPBK
 
 #ifdef _MSC_VER
-#ifdef BO_EXPORTS
+#if BO_COMPILING_DLL
 #define BO_EXPORT __declspec(dllexport)
 #else
 #define BO_EXPORT __declspec(dllimport)
