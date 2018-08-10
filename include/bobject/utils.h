@@ -30,7 +30,11 @@
 #define UTILS_H_EYRLMPBK
 
 #ifdef _MSC_VER
+#ifdef BO_EXPORTS
 #define BO_EXPORT __declspec(dllexport)
+#else
+#define BO_EXPORT __declspec(dllimport)
+#endif
 #else
 #define BO_EXPORT __attribute__((__visibility__("default")))
 #endif

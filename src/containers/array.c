@@ -317,7 +317,7 @@ bo_array_iter_next(BArray *self,
 {
   bo_assert(bo_is_typeof(self, BArray), "invalid array");
   validate_iter(self, iter);
-  iter->opaque += self->data_size;
+  (char*) iter->opaque += self->data_size;
 }
 
 /**

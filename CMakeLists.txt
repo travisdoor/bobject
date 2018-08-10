@@ -48,6 +48,7 @@ endif()
 add_subdirectory(examples)
 
 add_library(bobject SHARED ${SOURCE_FILES})
+target_compile_definitions(bobject PRIVATE -DBO_EXPORTS)
 
 # Define headers for this library. PUBLIC headers are used for
 # compiling the library, and will be added to consumers' build
