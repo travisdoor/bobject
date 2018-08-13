@@ -17,4 +17,37 @@ inheritance with a virtual table implemented.
 - Runtime virtual method linking
 - New and delete
 - Automatic parent destructor call
+## Platforms
+* MacOS
+* Linux
+* Windows
+
+## Compilation
+
+### Requirements
+* git
+* CMake
+* GCC/CLANG/Visual Studio compiler
+
+### MacOS and Linux
+```
+git clone https://github.com/travisdoor/bobject.git
+cd bobject
+mkdir build
+cd build
+cmake ..
+make install
+```
+
+### Windows
+```
+git clone https://github.com/travisdoor/bobject.git
+cd bobject
+mkdir build
+cd build
+cmake .. -G "Visual Studio 15 Win64"
+cmake --build . --config Release --target Install
+```
+
+
 
