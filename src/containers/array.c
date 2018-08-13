@@ -317,7 +317,11 @@ bo_array_iter_next(BArray *self,
 {
   bo_assert(bo_is_typeof(self, BArray), "invalid array");
   validate_iter(self, iter);
-  (char*) iter->opaque += self->data_size;
+#ifdef __GNUC__
+  iter->opaque += self->data_size;
+#else
+  (char *)iter->opaque += self->data_size;
+#endif
 }
 
 /**
